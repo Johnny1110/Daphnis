@@ -12,20 +12,38 @@
     <properties>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.resource.version>3.1.0</maven.resource.version>
+        <quartz.version>2.3.2</quartz.version>
+        <lombok.version>1.18.30</lombok.version>
+        <log4j.version>2.20.0</log4j.version>
     </properties>
 
     <dependencies>
-        <!-- <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
-            <version></version>
-        </dependency> -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version> <!-- Use the latest version -->
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version> <!-- Use the latest version -->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
     </dependencies>
 
-
-
     <build>
-        <!-- 編譯後的檔名 -->
         <finalName>project_final_name</finalName>
 
         <plugins>
